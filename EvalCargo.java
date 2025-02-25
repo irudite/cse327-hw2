@@ -119,6 +119,11 @@ public class EvalCargo {
         uniformCostOne.search();
         System.out.println();
 
+        SearchMethod greedySearchOne = new Greedy(searchOne);
+        System.out.println("Greedy Best First Search for Question One:");
+        greedySearchOne.search();
+        System.out.println();
+
         SearchMethod aStarOne = new AStar(searchOne);
         System.out.println("A* Search for Question One:");
         aStarOne.search();
@@ -130,6 +135,11 @@ public class EvalCargo {
         uniformCostTwo.search();
         System.out.println();
 
+        SearchMethod greedySearchTwo = new Greedy(searchTwo);
+        System.out.println("Greedy Best First Search for Question Two:");
+        greedySearchTwo.search();
+        System.out.println();
+
         SearchMethod aStarTwo = new AStar(searchTwo);
         System.out.println("A* Search for Question Two:");
         aStarTwo.search();
@@ -137,12 +147,17 @@ public class EvalCargo {
 
         SearchProblem searchThree = new ForwardStateSpaceSearch(questionC);
         SearchMethod uniformCostThree = new UniformCost(searchThree);
-        System.out.println("Uniform Cost Search for Question C:");
+        System.out.println("Uniform Cost Search for Question Three:");
         uniformCostThree.search();
         System.out.println();
 
+        SearchMethod greedySearchThree = new Greedy(searchThree);
+        System.out.println("Greedy Best First Search for Question Three:");
+        greedySearchThree.search();
+        System.out.println();
+
         SearchMethod aStarThree = new AStar(searchThree);
-        System.out.println("A* Search for Question C:");
+        System.out.println("A* Search for Question Three:");
         aStarThree.search();
         System.out.println();
     }
